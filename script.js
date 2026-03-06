@@ -90,9 +90,11 @@ function renderSuccess(id, record) {
     
     let roleOrGradeHtml = '';
     let typeBadgeClass = 'badge';
+    let tituloOficial = '';
     
     if (record.tipo === 'Aprobación') {
         typeBadgeClass += ' success-badge';
+        tituloOficial = 'Certificación de Aprobación en Diseño Asistido por Computadora (AutoCAD)';
         roleOrGradeHtml = `
             <div class="data-group">
                 <div class="data-label">Nota Obtenida</div>
@@ -100,9 +102,20 @@ function renderSuccess(id, record) {
             </div>
         `;
     } else if (record.tipo === 'Participación') {
+        tituloOficial = 'Certificado de Participación: Seminario Especializado en Diseño Asistido por Computadora (AutoCAD)';
         // Participación no muestra campos extra
-    } else if (record.tipo === 'Ponente' || record.tipo === 'Organizador') {
+    } else if (record.tipo === 'Ponente') {
         typeBadgeClass += ' brand-badge';
+        tituloOficial = 'Reconocimiento Académico por Ponencia Magistral en Diseño Asistido por Computadora (AutoCAD)';
+        roleOrGradeHtml = `
+            <div class="data-group">
+                <div class="data-label">Labor / Rol Desempeñado</div>
+                <div class="data-value"><span class="badge brand-badge">${record.rol || 'Ponente Principal'}</span></div>
+            </div>
+        `;
+    } else if (record.tipo === 'Organizador') {
+        typeBadgeClass += ' brand-badge';
+        tituloOficial = 'Reconocimiento al Mérito Organizativo del Programa Especializado en AutoCAD';
         roleOrGradeHtml = `
             <div class="data-group">
                 <div class="data-label">Labor / Rol Desempeñado</div>
@@ -124,6 +137,11 @@ function renderSuccess(id, record) {
             </div>
         </div>
         <div class="card-content">
+            <div class="data-group" style="text-align: center; background-color: #ffffff; padding: 1.5rem 1rem; border-radius: 8px; border: 1px solid var(--border-soft); box-shadow: 0 4px 12px rgba(0,0,0,0.03); margin-bottom: 2rem;">
+                <div class="data-label" style="color: var(--accent-brand);">Título Oficial</div>
+                <div class="data-value highlight" style="font-size: 1.1rem; line-height: 1.4; color: var(--text-main); margin-top: 0.5rem; text-transform: uppercase;">${tituloOficial}</div>
+            </div>
+
             <div class="data-group">
                 <div class="data-label">Titular de la Credencial</div>
                 <div class="data-value highlight" style="font-size: 1.15rem;">${record.nombre}</div>
