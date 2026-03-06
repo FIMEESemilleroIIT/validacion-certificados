@@ -1,85 +1,41 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Portal de Verificación Académica | FIMEE</title>
-    <style>
-        body { font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; background-color: #f8f9fa; color: #1a1a1a; margin: 0; padding: 40px 20px; display: flex; justify-content: center; }
-        .cert-container { background: #ffffff; width: 100%; max-width: 600px; padding: 40px; border-top: 5px solid #8b0000; box-shadow: 0 10px 30px rgba(0,0,0,0.08); border-radius: 4px; }
-        .header { text-align: center; border-bottom: 1px solid #eeeeee; padding-bottom: 20px; margin-bottom: 30px; }
-        .header h1 { font-size: 1.5em; margin: 0; color: #333333; text-transform: uppercase; letter-spacing: 1px; }
-        .header p { color: #666666; font-size: 0.9em; margin-top: 5px; }
-        .status-box { padding: 15px; border-radius: 4px; text-align: center; font-weight: bold; margin-bottom: 30px; }
-        .status-valid { background-color: #e8f5e9; color: #2e7d32; border: 1px solid #c8e6c9; }
-        .status-invalid { background-color: #ffebee; color: #c62828; border: 1px solid #ffcdd2; }
-        .data-row { display: flex; justify-content: space-between; border-bottom: 1px solid #f0f0f0; padding: 12px 0; }
-        .data-label { color: #777777; font-size: 0.9em; text-transform: uppercase; font-weight: bold; }
-        .data-value { font-weight: 500; text-align: right; }
-        .footer { text-align: center; margin-top: 40px; font-size: 0.8em; color: #999999; }
-    </style>
+    <title>Validación de Credenciales | FIMEE - UNICA</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
 </head>
+
 <body>
-
-    <div class="cert-container">
-        <div class="header">
-            <h1>Verificación de Credenciales</h1>
-            <p>Facultad de Ingeniería Mecánica Eléctrica y Electrónica</p>
-        </div>
-        
-        <div id="resultado">
+    <div class="container">
+        <header class="header">
+            <div class="logo-container">
+                <div class="logo">UNICA</div>
             </div>
+            <h2>Universidad Nacional San Luis Gonzaga</h2>
+            <p>Facultad de Ingeniería Mecánica Eléctrica y Electrónica (FIMEE)</p>
+            <h1>Validación Institucional de Credenciales</h1>
+        </header>
 
-        <div class="footer">
-            Documento respaldado por el Decanato de la FIMEE<br>Universidad Nacional "San Luis Gonzaga"
-        </div>
+        <main>
+            <section id="loading-state" class="loading-container">
+                <div class="spinner"></div>
+                <p>Verificando credencial en nuestro sistema...</p>
+            </section>
+
+            <section id="validation-result" class="result-container hidden">
+                <!-- El contenido se inyecta dinámicamente vía JavaScript -->
+            </section>
+        </main>
+
+        <footer class="footer">
+            <p>&copy; 2026 Universidad Nacional San Luis Gonzaga. Documento Oficial.</p>
+        </footer>
     </div>
-
-    <script>
-        // Tu base de datos ultra-rápida e incrustada (solo agregas los 25 aquí)
-        const baseDeDatos = {
-            "FIMEE-ACD-9X2B": { 
-                nombre: "Carlos Mendoza Ramos", 
-                evento: "Seminario Práctico de AutoCAD", 
-                horas: "12 Horas Académicas",
-                emision: "06 de Marzo de 2026",
-                resolucion: "Respaldo Decanato N° 045-2026"
-            },
-            "FIMEE-ACD-7Y4M": { 
-                nombre: "Ana Lucía Vargas", 
-                evento: "Seminario Práctico de AutoCAD", 
-                horas: "12 Horas Académicas",
-                emision: "06 de Marzo de 2026",
-                resolucion: "Respaldo Decanato N° 045-2026"
-            }
-            // Agrega los 23 restantes copiando y pegando el bloque de arriba
-        };
-
-        const urlParams = new URLSearchParams(window.location.search);
-        const codigo = urlParams.get('id');
-        const contenedor = document.getElementById('resultado');
-
-        if (codigo && baseDeDatos[codigo]) {
-            const cert = baseDeDatos[codigo];
-            contenedor.innerHTML = `
-                <div class="status-box status-valid">
-                    ✓ CREDENCIAL AUTÉNTICA Y VERIFICADA
-                </div>
-                <div class="data-row"><span class="data-label">Otorgado a</span><span class="data-value">${cert.nombre}</span></div>
-                <div class="data-row"><span class="data-label">Programa</span><span class="data-value">${cert.evento}</span></div>
-                <div class="data-row"><span class="data-label">Duración</span><span class="data-value">${cert.horas}</span></div>
-                <div class="data-row"><span class="data-label">Fecha de Emisión</span><span class="data-value">${cert.emision}</span></div>
-                <div class="data-row"><span class="data-label">Código Único</span><span class="data-value" style="font-family: monospace;">${codigo}</span></div>
-                <div class="data-row"><span class="data-label">Validación</span><span class="data-value">${cert.resolucion}</span></div>
-            `;
-        } else {
-            contenedor.innerHTML = `
-                <div class="status-box status-invalid">
-                    ✕ CÓDIGO NO VÁLIDO O NO ENCONTRADO
-                </div>
-                <p style="text-align:center; color:#666;">El identificador proporcionado no existe en los registros oficiales de esta emisión.</p>
-            `;
-        }
-    </script>
+    <script src="script.js"></script>
 </body>
+
 </html>
