@@ -18,7 +18,7 @@ const baseDeDatos = {
     "FIMEE-A15": { tipo: "Aprobación", nombre: "Quispe Talla Elvis Harold Smith", escuela: "Ingeniería Mecánica Eléctrica", nota: "XX/20" },
     "FIMEE-A16": { tipo: "Aprobación", nombre: "Mendoza Taguada Yanella Juana Rosa", escuela: "Ingeniería Mecánica Eléctrica", nota: "XX/20" },
     "FIMEE-A17": { tipo: "Aprobación", nombre: "Lopez Castillo Abigail Georgina", escuela: "Ingeniería Mecánica Eléctrica", nota: "XX/20" },
-    "FIMEE-A18": { tipo: "Aprobación", nombre: "xxx", escuela: "xxx", nota: "XX/20" },
+    "FIMEE-A18": { tipo: "Aprobación", nombre: "Talía Pacompia Aragón", escuela: "Ingeniería Mecánica Eléctrica", nota: "18/20" },
     "FIMEE-A19": { tipo: "Aprobación", nombre: "xxx", escuela: "xxx", nota: "XX/20" },
     "FIMEE-A20": { tipo: "Aprobación", nombre: "xxx", escuela: "xxx", nota: "XX/20" },
     "FIMEE-A21": { tipo: "Aprobación", nombre: "xxx", escuela: "xxx", nota: "XX/20" },
