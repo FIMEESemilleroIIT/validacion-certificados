@@ -65,7 +65,7 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    gap: 1.5rem; /* Separación entre ambos logos */
+    gap: 35px; /* Mayor separación uniforme y profesional (35px) */
 }
 
 .inst-logo {
