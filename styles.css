@@ -61,17 +61,18 @@ body {
 }
 
 .logo-container {
-    margin-bottom: 1rem;
+    margin-bottom: 1.5rem;
     display: flex;
     justify-content: center;
+    align-items: center;
+    gap: 1.5rem; /* Separación entre ambos logos */
 }
 
-.logo {
-    display: inline-block;
-    font-size: 2.25rem;
-    font-weight: 800;
-    color: var(--accent-brand);
-    letter-spacing: -0.5px;
+.inst-logo {
+    height: 65px; /* Altura óptima para cabeceras en móviles */
+    width: auto;
+    object-fit: contain;
+    filter: drop-shadow(0 2px 4px rgba(0,0,0,0.05)); /* Sombra sutil para darle profundidad */
 }
 
 .header h2 {
