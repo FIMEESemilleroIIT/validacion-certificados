@@ -1,7 +1,7 @@
 /* Base de datos estática incrustada */
 const baseDeDatos = {
     // --- 25 CERTIFICADOS DE APROBACIÓN ---
-    "FIMEE-A01": { tipo: "Aprobación", nombre: "Vasquez Davila José Antonio", escuela: "Ingeniería Mecánica Eléctrica", nota: "XX/20" },
+    "FIMEE-A01": { tipo: "Aprobación", nombre: "Vasquez Davila José Antonio", escuela: "Ingeniería Mecánica Eléctrica", nota: "18/20" },
     "FIMEE-A02": { tipo: "Aprobación", nombre: "Urrutia Aquije Genesis Muriel", escuela: "Ingeniería Mecánica Eléctrica", nota: "XX/20" },
     "FIMEE-A03": { tipo: "Aprobación", nombre: "Cuchula Lima Mario César", escuela: "Ingeniería Mecánica Eléctrica", nota: "XX/20" },
     "FIMEE-A04": { tipo: "Aprobación", nombre: "Castañeda PISCOYA BRUSS Javier", escuela: "Ingeniería Electrónica", nota: "XX/20" },
