@@ -49,7 +49,7 @@ const baseDeDatos = {
     "FIMEE-ORG7": { tipo: "Organizador", nombre: "Lopez Castillo Abigail Georgina", escuela: "Ingeniería Mecánica Eléctrica", rol: "Comité Organizador" },
 
     // --- 1 CERTIFICADO DE DOCENTE/PONENTE ---
-    "FIMEE-IIT-DOC1": { tipo: "Ponente", nombre: "Victor Joel Arroyo Quispe", escuela: "Docente FIMEE - UNICA", rol: "Ponente Principal"  }
+    "FIMEE-IIT-DOC1": { tipo: "Ponente", nombre: "Dr. Victor Joel Arroyo Quispe", escuela: "Docente FIMEE - UNICA", rol: "Ponente Principal"  }
 };
 
 document.addEventListener("DOMContentLoaded", () => {
