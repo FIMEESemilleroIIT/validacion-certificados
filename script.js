@@ -5,7 +5,7 @@ const baseDeDatos = {
     "FIMEE-A02": { tipo: "Aprobación", nombre: "Urrutia Aquije Genesis Muriel", escuela: "Ingeniería Mecánica Eléctrica", nota: "XX/20" },
     "FIMEE-A03": { tipo: "Aprobación", nombre: "Cuchula Lima Mario César", escuela: "Ingeniería Mecánica Eléctrica", nota: "XX/20" },
     "FIMEE-A04": { tipo: "Aprobación", nombre: "Castañeda PISCOYA BRUSS Javier", escuela: "Ingeniería Electrónica", nota: "XX/20" },
-    "FIMEE-A05": { tipo: "Aprobación", nombre: "Tipiana Cabrera Héctor Luis", escuela: "Ingeniería Mecánica Eléctrica", nota: "XX/20" },
+    "FIMEE-A05": { tipo: "Aprobación", nombre: "Tipiana Cabrera Héctor Luis", escuela: "Ingeniería Mecánica Eléctrica", nota: "18/20" },
     "FIMEE-A06": { tipo: "Aprobación", nombre: "Quincho Elias Diego Fabricio", escuela: "Ingeniería Mecánica Eléctrica", nota: "XX/20" },
     "FIMEE-A07": { tipo: "Aprobación", nombre: "Marcatoma Cruz Carlos David", escuela: "Ingeniería Mecánica Eléctrica", nota: "XX/20" },
     "FIMEE-A08": { tipo: "Aprobación", nombre: "Ramírez Ramos Rodrigo Francisco", escuela: "Ingeniería Mecánica Eléctrica", nota: "XX/20" },
